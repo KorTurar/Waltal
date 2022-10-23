@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#4a91d9">
+
+
+        <TextView
+            android:id="@+id/myNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Me :" />
+
+        <EditText
+            android:id="@+id/myNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/myNameLabel"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/myNameLabel"
+            android:layout_toRightOf="@id/myNameLabel"
+
+            android:enabled="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/connectionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myNameLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Status..." />
+
+        <Button
+            android:id="@+id/discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/connectionStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:text="discover peers" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/discover"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#80E8F8E7" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discover"
+            android:minHeight="0dp">
+
+            <ListView
+                android:id="@+id/peerListView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="30dp"
+                android:background="#80E8F8E7" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#b5d5f5">
+
+        <com.example.waltal5.ConversationUI
+            android:id="@+id/conversationUI"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b5d5f5" />
+    </RelativeLayout>
+</LinearLayout>

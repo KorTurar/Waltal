@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogNameLabel"
+        android:text="name:"
+        />
+
+    <EditText
+        android:id="@+id/dialogMyNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/dialogNameLabel"
+        android:layout_toRightOf="@+id/dialogNameLabel"
+        android:minHeight="48dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogMyNameEditText"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/dialogOkButton"
+        android:text="Ok"/>
+
+</RelativeLayout>
